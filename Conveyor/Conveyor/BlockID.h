@@ -1,9 +1,10 @@
 #ifndef BLOCK_ID_H
 #define BLOCK_ID_H
-#include "Packet.h"
-class BlockID
+
+#include "BlockCreate.h"
+class BlockID : public BlockCreate
 {
 public:
-	Packet assignmentID(Packet packet, unsigned int i);
+	Packet dataAssignment(Packet packet, unsigned int i) override;
 };
 #endif

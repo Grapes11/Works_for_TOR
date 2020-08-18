@@ -1,6 +1,6 @@
 #include "BlockNumber.h"
 
-Packet BlockNumber::assignmentNumber(Packet packet) {
+Packet BlockNumber::dataAssignment(Packet packet, unsigned int i) {
 	packet.Number = insertNumber(getRandomNumber());
 	return packet;
 }
@@ -29,3 +29,15 @@ float BlockNumber::insertNumber(RandomNumber number) {
 	}
 	return NULL;
 }
+
+//RandomNumber BlockNumber::getRandomNumber() {
+//	int mas[3] = { 1,2,3 };
+//	int number = rand() % (sizeof(mas) / sizeof(mas[0]));
+//	switch (number) {
+//	case 0: return RandomNumber::RAND;
+//	case 1: return RandomNumber::RAND_SIN;
+//	case 2: return RandomNumber::RAND_COS;
+//	default: return RandomNumber::RAND;
+//	}
+//	return RandomNumber::RAND;
+//}

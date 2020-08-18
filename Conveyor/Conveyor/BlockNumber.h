@@ -1,14 +1,14 @@
 #ifndef BLOCK_NUMBER_H
 #define BLOCK_NUMBER_H
 
-#include "Packet.h"
 #include "RandomNumber.h"
+#include "BlockCreate.h"
 #include <cstdlib>
 #include <cmath>
-class BlockNumber
+class BlockNumber : public BlockCreate
 {
 public:
-	Packet assignmentNumber(Packet packet);
+	Packet dataAssignment(Packet packet, unsigned int i) override;
 	RandomNumber getRandomNumber();
 	float insertNumber(RandomNumber number);
 };

@@ -139,16 +139,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BlockCreate.cpp" />
     <ClCompile Include="BlockID.cpp" />
     <ClCompile Include="BlockName.cpp" />
     <ClCompile Include="BlockNumber.cpp" />
     <ClCompile Include="Conveyor.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="BlockCreate.h" />
     <ClInclude Include="BlockID.h" />
     <ClInclude Include="BlockName.h" />
     <ClInclude Include="BlockNumber.h" />
-    <ClInclude Include="NameProduct.h" />
     <ClInclude Include="Packet.h" />
     <ClInclude Include="RandomNumber.h" />
   </ItemGroup>

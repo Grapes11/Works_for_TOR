@@ -1,13 +1,36 @@
 #ifndef BLOCK_NAME_H
 #define BLOCK_NAME_H
 
-#include "Packet.h"
-#include "NameProduct.h"
+#include "BlockCreate.h"
 #include <string>
-class BlockName {
+
+class BlockName : public BlockCreate {
 public:
-	Packet assignmentName(Packet packet, unsigned int i);
-	NameProduct getNameProduct(unsigned int i);
-	std::string namingObject(NameProduct name);
+	virtual Packet dataAssignment(Packet packet, unsigned int i) override;
 };
+
+enum class NameProduct
+{
+	OBJECT_A,
+	OBJECT_B,
+	OBJECT_C,	
+};
+
+class NameProductA : public BlockName
+{
+	Packet dataAssignment(Packet packet, unsigned int i) override;
+};
+
+class NameProductB : public BlockName
+{
+	Packet dataAssignment(Packet packet, unsigned int i) override;
+};
+
+class NameProductC : public BlockName
+{
+	Packet dataAssignment(Packet packet, unsigned int i) override;
+};
+
+BlockName initializationBlockName(NameProduct name);
+
 #endif
