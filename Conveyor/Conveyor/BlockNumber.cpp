@@ -1,43 +1,21 @@
 #include "BlockNumber.h"
 
 Packet BlockNumber::dataAssignment(Packet packet, unsigned int i) {
-	packet.Number = insertNumber(getRandomNumber());
+	packet.Number = 0;
 	return packet;
 }
 
-RandomNumber BlockNumber::getRandomNumber() {
-	int mas[3] = { 1,2,3 };
-	int number = rand() % (sizeof(mas) / sizeof(mas[0]));
-	switch (number) {
-	case 0: return RandomNumber::RAND;
-	case 1: return RandomNumber::RAND_SIN;
-	case 2: return RandomNumber::RAND_COS;
-	default: return RandomNumber::RAND;
-	}
-	return RandomNumber::RAND;
+Packet RandomNumberRAND::dataAssignment(Packet packet, unsigned int i) {
+	packet.Number = float(rand() % 100);
+	return packet;
 }
 
-float BlockNumber::insertNumber(RandomNumber number) {
-	if (number == RandomNumber::RAND) {
-		return float(rand() % 100);
-	}
-	else if (number == RandomNumber::RAND_COS) {
-		return float(cos((rand() % 360) * 3.14 / 180));
-	}
-	else {
-		return float(sin((rand() % 360) * 3.14 / 180));
-	}
-	return NULL;
+Packet RandomNumberCOS::dataAssignment(Packet packet, unsigned int i) {
+	packet.Number = float(cos((rand() % 360) * 3.14 / 180));
+	return packet;
 }
 
-//RandomNumber BlockNumber::getRandomNumber() {
-//	int mas[3] = { 1,2,3 };
-//	int number = rand() % (sizeof(mas) / sizeof(mas[0]));
-//	switch (number) {
-//	case 0: return RandomNumber::RAND;
-//	case 1: return RandomNumber::RAND_SIN;
-//	case 2: return RandomNumber::RAND_COS;
-//	default: return RandomNumber::RAND;
-//	}
-//	return RandomNumber::RAND;
-//}
+Packet RandomNumberSIN::dataAssignment(Packet packet, unsigned int i) {
+	packet.Number = float(sin((rand() % 360) * 3.14 / 180));
+	return packet;
+}

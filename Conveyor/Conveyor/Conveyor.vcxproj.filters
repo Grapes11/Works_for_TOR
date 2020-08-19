@@ -30,11 +30,11 @@
     <ClCompile Include="BlockCreate.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="Initialization.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="RandomNumber.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="BlockID.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -48,6 +48,9 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="BlockCreate.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Initialization.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

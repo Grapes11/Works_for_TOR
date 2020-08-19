@@ -144,14 +144,15 @@
     <ClCompile Include="BlockName.cpp" />
     <ClCompile Include="BlockNumber.cpp" />
     <ClCompile Include="Conveyor.cpp" />
+    <ClCompile Include="Initialization.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BlockCreate.h" />
     <ClInclude Include="BlockID.h" />
     <ClInclude Include="BlockName.h" />
     <ClInclude Include="BlockNumber.h" />
+    <ClInclude Include="Initialization.h" />
     <ClInclude Include="Packet.h" />
-    <ClInclude Include="RandomNumber.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Conveyor.rc" />

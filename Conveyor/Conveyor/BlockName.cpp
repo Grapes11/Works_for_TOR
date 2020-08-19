@@ -20,16 +20,6 @@ Packet NameProductC::dataAssignment(Packet packet, unsigned int i) {
 	return packet;
 }
 
-BlockName initializationBlockName(NameProduct name) {
-	switch (name) {
-	case NameProduct::OBJECT_A: return NameProductA();
-	case NameProduct::OBJECT_B: return NameProductB();
-	case NameProduct::OBJECT_C: return NameProductC();
-	default: return NameProductA();
-	}
-}
-
-
 
 
 

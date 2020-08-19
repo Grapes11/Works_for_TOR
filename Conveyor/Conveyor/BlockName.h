@@ -5,6 +5,7 @@
 #include <string>
 
 class BlockName : public BlockCreate {
+	
 public:
 	virtual Packet dataAssignment(Packet packet, unsigned int i) override;
 };
@@ -30,7 +31,5 @@ class NameProductC : public BlockName
 {
 	Packet dataAssignment(Packet packet, unsigned int i) override;
 };
-
-BlockName initializationBlockName(NameProduct name);
 
 #endif
